@@ -3,6 +3,11 @@
 <b>This repo cloning</b>
 <pre>git clone https://github.com/zdravhub/docker-compose.git</pre>
 
+<b>Prerequisites</b>
+Install Docker Engine: https://docs.docker.com/engine/installation/
+
+Install Docker Compose: https://docs.docker.com/compose/install/
+
 <b>Containers initialization</b>
 <pre>docker-compose -f wildfly-postgres-elastic.yml up</pre>
 
