@@ -1,7 +1,6 @@
-# docker-compose
-Docker-compose files
+Wildfly, Postgres and Elasticsearch environment
 
-# Containers initialization
+<b>Containers initialization</b>
 docker-compose -f wildfly-postgres-elastic.yml up
 
 # Health check
