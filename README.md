@@ -9,5 +9,7 @@ docker-compose ps
 
 # Bash login in containers
 docker exec -it wildfly /bin/bash
+
 docker exec -it postgres /bin/bash
+
 docker exec -it elastic /bin/bash
