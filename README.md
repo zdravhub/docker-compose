@@ -1,12 +1,15 @@
-Wildfly, Postgres and Elasticsearch environment
+# Wildfly, Postgres and Elasticsearch environment
 
 <b>Containers initialization</b>
+
 docker-compose -f wildfly-postgres-elastic.yml up
 
-# Health check
+<b>Health check</b>
+
 docker-compose ps
 
-# Bash login in containers
+<b>Bash login in containers</b>
+
 docker exec -it wildfly /bin/bash
 
 docker exec -it postgres /bin/bash
