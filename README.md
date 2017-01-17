@@ -4,9 +4,13 @@
 
 docker-compose -f wildfly-postgres-elastic.yml up
 
+<hr>
+
 <b>Health check</b>
 
 docker-compose ps
+
+<hr>
 
 <b>Bash login in containers</b>
 
