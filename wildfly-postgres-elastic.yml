@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:9.5
+    container_name: postgres
+    networks:
+      octoon:
+        ipv4_address: 172.16.238.71
+  elastic:
+    container_name: elastic
+    image: valerianomanassero/elasticsearch-centos
+    networks:
+      octoon:
+        ipv4_address: 172.16.238.72
+  wildfly:
+    container_name: wildfly
+    image: octoon/keycloak-centos
+    networks:
+      octoon:
+        ipv4_address: 172.16.238.73
+
+networks:
+  octoon:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.238.0/24
+        gateway: 172.16.238.1
