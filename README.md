@@ -1,5 +1,11 @@
 # Wildfly, Postgres and Elasticsearch environment
 
+<b>This repo cloning</b>
+
+git clone https://github.com/zdravhub/docker-compose.git
+
+<hr>
+
 <b>Containers initialization</b>
 
 docker-compose -f wildfly-postgres-elastic.yml up
