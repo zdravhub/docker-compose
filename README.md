@@ -8,7 +8,7 @@ docker-compose -f wildfly-postgres-elastic.yml up
 
 <b>Health check</b>
 
-docker-compose ps
+docker-compose -f wildfly-postgres-elastic.yml ps
 
 <hr>
 
