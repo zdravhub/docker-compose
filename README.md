@@ -4,6 +4,7 @@
 <pre>git clone https://github.com/zdravhub/docker-compose.git</pre>
 
 <b>Prerequisites</b>
+
 Install Docker Engine: https://docs.docker.com/engine/installation/
 
 Install Docker Compose: https://docs.docker.com/compose/install/
