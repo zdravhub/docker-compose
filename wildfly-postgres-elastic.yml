@@ -9,7 +9,7 @@ services:
         ipv4_address: 172.16.238.71
   elastic:
     container_name: elastic
-    image: valerianomanassero/elasticsearch-centos
+    image: octoon/docker-elasticsearch-centos
     networks:
       octoon:
         ipv4_address: 172.16.238.72
