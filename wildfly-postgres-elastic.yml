@@ -4,18 +4,21 @@ services:
   postgres:
     image: postgres:9.5
     container_name: postgres
+    hostname: postgres
     networks:
       octoon:
         ipv4_address: 172.16.238.71
   elastic:
     container_name: elastic
     image: octoon/elasticsearch-centos
+    hostname: elastic
     networks:
       octoon:
         ipv4_address: 172.16.238.72
   wildfly:
     container_name: wildfly
     image: octoon/keycloak-centos
+    hostname: wildfly
     networks:
       octoon:
         ipv4_address: 172.16.238.73
