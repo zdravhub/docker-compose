@@ -5,6 +5,9 @@ services:
     image: postgres:9.5
     container_name: postgres
     hostname: postgres
+    extra_hosts:
+    - "elastic:172.16.238.72"
+    - "wildfly:172.16.238.73"
     networks:
       octoon:
         ipv4_address: 172.16.238.71
@@ -12,6 +15,9 @@ services:
     container_name: elastic
     image: octoon/elasticsearch-centos
     hostname: elastic
+    extra_hosts:
+    - "postgres:172.16.238.71"
+    - "wildfly:172.16.238.73"
     networks:
       octoon:
         ipv4_address: 172.16.238.72
@@ -19,6 +25,9 @@ services:
     container_name: wildfly
     image: octoon/keycloak-centos
     hostname: wildfly
+    extra_hosts:
+    - "postgres:172.16.238.71"
+    - "elastic:172.16.238.72"
     networks:
       octoon:
         ipv4_address: 172.16.238.73
