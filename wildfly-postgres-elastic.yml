@@ -5,9 +5,13 @@ services:
     image: octoon/centos7-postgres
     container_name: postgres
     hostname: postgres
+    volumes:
+    - /home/data/postgres:/var/lib/pgsql/9.5/data
     extra_hosts:
     - "elastic:172.16.238.72"
     - "wildfly:172.16.238.73"
+    ports:
+    - "5432:5432"
     networks:
       octoon:
         ipv4_address: 172.16.238.71
@@ -15,9 +19,13 @@ services:
     container_name: elastic
     image: octoon/elasticsearch-centos
     hostname: elastic
+    volumes:
+    - /home/data/elasticsearch:/var/lib/elasticsearch
     extra_hosts:
     - "postgres:172.16.238.71"
     - "wildfly:172.16.238.73"
+    ports:
+    - "9200:9200"
     networks:
       octoon:
         ipv4_address: 172.16.238.72
@@ -29,6 +37,7 @@ services:
     - "postgres:172.16.238.71"
     - "elastic:172.16.238.72"
     ports:
+    - "22:22"
     - "8080:8080"
     - "8443:8443"
     - "9990:9990"
